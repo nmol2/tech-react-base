@@ -1,0 +1,14 @@
+npm i axios
+npm install primereact
+npm install primeicons
+npm i primeflex
+
+----add in App.tsx
+import 'primereact/resources/themes/lara-light-indigo/theme.css'; //theme
+import 'primereact/resources/primereact.min.css'; //core css
+import 'primeicons/primeicons.css'; //icons
+import 'primeflex/primeflex.css'; // flex
+
+
+npm install react-router-dom localforage match-sorter sort-by
+

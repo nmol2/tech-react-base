@@ -1,4 +1,5 @@
 import axios from 'axios';
+import LocalStorageService from '../../services/storage/LocalStorageService';
 
 interface LoginResponse {
     token: string;
@@ -19,7 +20,7 @@ export default {
                 const token = response.data.token;
 
                 // Update the local stored token
-                localStorage.setItem('token', token);
+                LocalStorageService.setItem('token', token);
                 return response.data;
 
             } else {

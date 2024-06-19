@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import LocalStorageService from '../../services/storage/LocalStorageService';
 
 // Create an Axios instance
 const api: AxiosInstance = axios.create({
@@ -12,6 +13,7 @@ api.interceptors.request.use(
         config.headers = {
             ...config.headers,
             // Add your custom headers here
+            Authorization: `Bearer ${LocalStorageService.getItem('token')}`,
         } as AxiosRequestHeaders; // Explicitly type the headers object
         return config;
     },
